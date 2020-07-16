@@ -1,3 +1,2 @@
 # Hidroterra_ReacNative
-Este es el repositorio de la app 
-Hidro terra
+Aplicacion react native hibernadero, terrario inteligente
