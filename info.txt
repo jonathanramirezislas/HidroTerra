@@ -1,1 +1,2 @@
 Es una aplicacion desarrollada en Reac Native
+la cual sirve para hibernaderos, terrarios
