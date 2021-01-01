@@ -12,7 +12,7 @@ const dataSoilMoisture = []
 const dataHumidity = []
 const contentInset = { top: 20, bottom: 20 }
 
-class screen1 extends React.Component{
+class chart extends React.Component{
 
     state = {
         data: []
@@ -229,4 +229,4 @@ const styles = StyleSheet.create({
 });
 
 
- export default screen1;
+ export default chart;

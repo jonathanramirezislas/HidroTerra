@@ -6,7 +6,7 @@ import axios from 'axios';
 
    
 
-class screen2 extends React.PureComponent  {
+class records extends React.PureComponent  {
   state = {
     data: []
   }
@@ -260,4 +260,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default screen2
+export default records

@@ -4,8 +4,8 @@ import {Button,Icon} from 'native-base';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Screen1 from './screens/screen1';
-import Screen2 from './screens/screen2';
+import Chart from './screens/chart';
+import Records from './screens/records';
 import Controls from './screens/controls';
 import login from './screens/login';
 import Signup from './screens/signup';
@@ -104,14 +104,14 @@ function HomeTabScreen({navigation}){
           ),
         }}  />
 
-    <Tab.Screen name="Screen1" component={Screen1} options={{
+    <Tab.Screen name="Chart" component={Chart} options={{
           tabBarLabel: 'Real-time data',
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons name="chart-areaspline" color={focused ? "yellow" : "white"} size={25} />
           ),
         }} />
      
-    <Tab.Screen name="Screen2" component={Screen2} options={{
+    <Tab.Screen name="Records" component={Records} options={{
           tabBarLabel: 'Records',
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons name="database-search" color={focused ? "yellow" : "white"} size={25} />
@@ -206,7 +206,7 @@ function petsStackScreen({navigation }) {
                 <Image source={{uri: 'http://proyectosita.com/terrarium/sources/homeleaves.gif'}} style={{width:'100%' , height: 300}} />
           
                 <Button rounded block success style = {{margin:'5%',padding: '5%'}}
-                        onPress={() => { navigation.navigate('Screen1'); }} >
+                        onPress={() => { navigation.navigate('Chart'); }} >
                         <Text style={styles.textStyle}>Terrarium</Text>
                         <Icon name='ios-leaf' /> 
                         
