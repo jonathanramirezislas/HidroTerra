@@ -14,8 +14,8 @@ class login extends Component{
   constructor (){ 
     super ()
     this.state={ 
-      email:'',
-      pass:'',
+      email:'jona@gmail.com',
+      pass:'12345678',
       
     };
 

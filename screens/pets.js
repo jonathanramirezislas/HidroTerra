@@ -92,9 +92,9 @@ render(){
     const {data} = this.state;
     const { search } = this.state;
 
-    const listItems = data.map((pet) =>
-    <Card>
-          <CardItem>
+    const listItems = data.map((pet, index) =>
+    <Card >
+          <CardItem >
           <Image source={{uri: baseUrl+'sources/pets/'+pet.image }} style={{height: 200, width:'100%', flex: 1}}/>
           </CardItem>
             <CardItem>

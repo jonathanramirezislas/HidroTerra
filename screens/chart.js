@@ -13,7 +13,7 @@ const dataSoilMoisture = []
 const dataHumidity = []
 const contentInset = { top: 20, bottom: 20 }
 
-class chart extends React.Component{
+class chart extends Component{
 
     state = {
         data: []
@@ -43,7 +43,7 @@ class chart extends React.Component{
   
           const data = res.data;
           this.setState({ data });
-          
+          console.log("ata",data);
           this.setState({temperature:data[0].temperature})
           this.setState({humidity:data[0].humidity})
           this.setState({soilmoisture:data[0].soilmoisture})
@@ -58,7 +58,7 @@ class chart extends React.Component{
 
         })
 
-      }, 3000);// Execute this each 3 seconds  
+      }, 300000000000);// Execute this each 3 seconds  
     }
 
     componentWillUnmount() {
@@ -203,12 +203,6 @@ class chart extends React.Component{
                   <Icon name='ios-save' /> 
                   <Text style = {{color:'white'}}>Save Data!</Text>
               </Button>
-
- 
-
-
-
-
          <Text></Text>
             </Content>
           }
