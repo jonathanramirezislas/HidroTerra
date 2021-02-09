@@ -3,11 +3,11 @@ import { Text, View, StyleSheet,ImageBackground,ToastAndroid } from 'react-nativ
 import { TextInput } from 'react-native-paper';
 import {Button,Icon} from 'native-base';
 
-import Screen1 from './screen1';
 import Axios from 'axios';
+import {baseUrl} from './shared/baseUrl';
 
 
-const image = { uri: "http://proyectosita.com/terrarium/sources/backg.png" };
+const image = { uri: baseUrl + 'sources/backg.png' };
 
 class login extends Component{
  
@@ -40,7 +40,7 @@ console.log(this.state.email)
 console.log(this.state.pass)
   await Axios ({
     method:'post',
-    url:'http://proyectosita.com/terrarium/login.php',
+    url:baseUrl +'login.php',
     data:formData,
     config:{headers:{'Content-Type':'multipart/form-data'}}
   }).then(response=>{

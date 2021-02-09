@@ -1,6 +1,7 @@
 import React, { Component,useState } from 'react';
 import { View, StyleSheet,Image } from 'react-native';
 import { Container, Header, Content,Accordion ,H2,Body } from "native-base";
+import {baseUrl} from './shared/baseUrl';
 
 
 import Axios from 'axios';
@@ -47,7 +48,7 @@ console.log(this.state.email)
 console.log(this.state.pass)
   await Axios ({
     method:'post',
-    url:'http://proyectosita.com/terrarium/login.php',
+    url:baseUrl+'login.php',
     data:formData,
     config:{headers:{'Content-Type':'multipart/form-data'}}
   }).then(response=>{
@@ -97,7 +98,7 @@ render(){
       </Header>
 
       <View>
-      <Image source={{uri: 'http://proyectosita.com/terrarium/sources/logohidroterra.jpg'}} style={{width:280 , height: 150,margin:'5%'}} />
+      <Image source={{uri: baseUrl+'sources/logohidroterra.jpg'}} style={{width:280 , height: 150,margin:'5%'}} />
 
       </View>
       <Content padder>

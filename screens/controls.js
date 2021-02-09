@@ -5,9 +5,10 @@ import { Button,Container, Header, Card, CardItem, Thumbnail, Left, Body,H2,Icon
 import axios from 'axios';
 import ProgressCircle from 'react-native-progress-circle'
 import Constants from 'expo-constants';
+import {baseUrl} from './shared/baseUrl';
 
 
-const image = { uri: "http://proyectosita.com/terrarium/sources/backg.png" };
+const image = { uri: baseUrl+'sources/backg.png' };
 
 class controls extends Component{
  
@@ -36,7 +37,7 @@ class controls extends Component{
 
     this._interval = setInterval(() => {
       
-      axios.get('http://proyectosita.com/terrarium/sensorsdata.php')
+      axios.get(baseUrl+'sensorsdata.php')
       .then(res => {
 
         const data = res.data;
@@ -60,7 +61,7 @@ class controls extends Component{
       showload:false
     });
 
-    axios.get('http://proyectosita.com/terrarium/parameters.php')
+    axios.get(baseUrl+'parameters.php')
     .then(res => {
 
       const data = res.data;
@@ -130,7 +131,7 @@ console.log('sending values');
 
   await axios ({
     method:'post',
-    url:'http://proyectosita.com/terrarium/controls.php',
+    url:baseUrl+'controls.php',
     data:formData,
     config:{headers:{'Content-Type':'multipart/form-data'}}
   }).then(response=>{
@@ -169,7 +170,7 @@ console.log('sending values');
   console.log('data send ',formData);
     await axios ({
       method:'post',
-      url:'http://proyectosita.com/terrarium/controls.php',
+      url:baseUrl+'controls.php',
       data:formData,
       config:{headers:{'Content-Type':'multipart/form-data'}}
     }).then(response=>{

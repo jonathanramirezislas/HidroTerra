@@ -3,6 +3,7 @@ import { View,Image ,StyleSheet,Text,ToastAndroid} from 'react-native';
 import { Container, Header, Content, Card, CardItem,H2,Item,Button, Left, Body, Right,Icon,Input } from 'native-base';
 import axios from 'axios';
 import { SearchBar } from 'react-native-elements';
+import {baseUrl} from './shared/baseUrl';
 
 
 class pets extends Component{
@@ -25,7 +26,7 @@ class pets extends Component{
  
    componentDidMount() {
     const {data} = this.state;
-    axios.get('http://proyectosita.com/terrarium/allpets.php')
+    axios.get(baseUrl+'allpets.php')
     .then(response => {
   
       const data = response.data;
@@ -52,7 +53,7 @@ console.log(Text)
 
    axios ({
     method:'post',
-    url:'http://proyectosita.com/terrarium/searchpet.php',
+    url:baseUrl+'searchpet.php',
     data:formData,
     config:{headers:{'Content-Type':'multipart/form-data'}}
   }).then(response=>{
@@ -94,7 +95,7 @@ render(){
     const listItems = data.map((pet) =>
     <Card>
           <CardItem>
-          <Image source={{uri: 'http://proyectosita.com/terrarium/sources/pets/'+pet.image }} style={{height: 200, width:'100%', flex: 1}}/>
+          <Image source={{uri: baseUrl+'sources/pets/'+pet.image }} style={{height: 200, width:'100%', flex: 1}}/>
           </CardItem>
             <CardItem>
               <Left>

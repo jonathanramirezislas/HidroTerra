@@ -3,6 +3,7 @@ import PureChart from 'react-native-pure-chart';
 import React, { useState} from 'react';
 import { Button,Container, Header, Content, DatePicker,Icon,Body,Right,H2 } from 'native-base';
 import axios from 'axios';
+import {baseUrl} from './shared/baseUrl';
 
    
 
@@ -36,7 +37,7 @@ setSecondDate(newDate) {
 
 componentDidMount() {
   const {data} = this.state;
-  axios.get('http://proyectosita.com/terrarium/getdatafirst.php')
+  axios.get(baseUrl+'getdatafirst.php')
   .then(response => {
 
     const data = response.data;
@@ -61,7 +62,7 @@ filterData = async() => {
  console.log('secondDate', secondFormattedDate)
 await axios ({
   method:'post',
-  url:'http://proyectosita.com/terrarium/getdatabyfilterdate.php',
+  url:baseUrl+'getdatabyfilterdate.php',
   data:formData,
   config:{headers:{'Content-Type':'multipart/form-data'}}
 }).then(response=>{

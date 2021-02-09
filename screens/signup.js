@@ -3,9 +3,10 @@ import {  View, StyleSheet,ToastAndroid} from 'react-native';
 import { TextInput } from 'react-native-paper';
 import { Button,Text } from 'react-native-elements';
 import Axios from 'axios';
+import {baseUrl} from './shared/baseUrl';
 
 
-const image = { uri: "http://proyectosita.com/terrarium/sources/logohidroterra.jpg" };
+const image = { uri: baseUrl+'sources/logohidroterra.jpg' };
 
 class signup extends Component{
  
@@ -69,7 +70,7 @@ handleSignUp  = () =>  {
       formData.append('email', this.state.email)
     await Axios ({
       method:'post',
-      url:'http://proyectosita.com/terrarium/signup.php',
+      url:baseUrl+'signup.php',
       data:formData,
       config:{headers:{'Content-Type':'multipart/form-data'}}
     }).then(response=>{

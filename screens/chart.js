@@ -4,6 +4,7 @@ import {ActivityIndicator,View,StyleSheet,ToastAndroid,Text } from 'react-native
 import { Button,Container, Content,Icon,Header,H2, Left, Right, Body } from 'native-base'
 import { LineChart, YAxis, Grid } from 'react-native-svg-charts'
 
+import {baseUrl} from './shared/baseUrl';
 
 
 //Data for charts
@@ -37,7 +38,7 @@ class chart extends React.Component{
 
       this._interval = setInterval(() => {
         
-        axios.get('http://proyectosita.com/terrarium/sensorsdata.php')
+        axios.get(baseUrl+'sensorsdata.php')
         .then(res => {
   
           const data = res.data;
@@ -76,7 +77,7 @@ class chart extends React.Component{
      
       await axios ({
         method:'post',
-        url:'http://proyectosita.com/terrarium/savedata.php',
+        url:baseUrl+'savedata.php',
         data:formData,
         config:{headers:{'Content-Type':'multipart/form-data'}}
       }).then(response=>{
