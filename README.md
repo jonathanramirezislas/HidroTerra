@@ -2,9 +2,6 @@
 Aplicacion react native hibernadero, terrario inteligente
 
 
-# Agenda for appointments
-    
-
 ![HidroTerra](https://res.cloudinary.com/djuqxjkh3/image/upload/v1612903462/hidroterra/Captura_qvtznj.png)
 
 
@@ -13,7 +10,7 @@ Heroes is a app to find your favorite hero.
 ## 📢 Requirements
 - Node JS 12.16.1 _(Recommended)_
 - NPM 6.13.4 _(Recommended)_
-- EXPO CLI 4.1.6  _(Recommended)_
+- EXPO  4.1.6  _(Recommended)_
 
 
 ## 🛠 Installation
