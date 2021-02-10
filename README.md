@@ -4,9 +4,6 @@ Aplicacion react native hibernadero, terrario inteligente
 
 ![HidroTerra](https://res.cloudinary.com/djuqxjkh3/image/upload/v1612903462/hidroterra/Captura_qvtznj.png)
 
-
-Heroes is a app to find your favorite hero.
-
 ## 📢 Requirements
 - Node JS 12.16.1 _(Recommended)_
 - NPM 6.13.4 _(Recommended)_
